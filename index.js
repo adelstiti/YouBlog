@@ -27,6 +27,7 @@ const logoutController = require('./controllers/Users/logout')
 const validateCreatePostMiddleware = require('./middleware/storePost')
 const authMiddleware = require('./middleware/auth')
 const redirectIfAuthhMiddleware = require('./middleware/redirectIfAuth')
+const confirmPassMiddleware = require('./middleware/confirmPass')
 
 
 
@@ -74,13 +75,13 @@ app.get('/',homePageController);
 
 app.get('/posts/new',authMiddleware,createPostController);
 
-app.post("/posts/store", authMiddleware, validateCreatePostMiddleware, storePostController);
+app.post("/posts/store",authMiddleware,validateCreatePostMiddleware,storePostController);
 
 app.get('/post/:id',getPostController)
 
 app.get('/auth/Register',redirectIfAuthhMiddleware,createUserController)
 
-app.post("/users/Register",redirectIfAuthhMiddleware,storeUserController);
+app.post("/users/Register",redirectIfAuthhMiddleware,confirmPassMiddleware,storeUserController);
 
 app.get('/auth/login',redirectIfAuthhMiddleware,loginController)
 

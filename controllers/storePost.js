@@ -8,6 +8,7 @@ module.exports = async (req,res) => {
     image.mv(uploadPath,(error) => {
         cloudinary.v2.uploader.upload(uploadPath,(error,result) => {
             if(error){
+                console.log(error)
                 return res.redirect('/') ;
             }
             Post.create({
@@ -17,7 +18,6 @@ module.exports = async (req,res) => {
             } , (error,post) => {
                 console.log(post)
                 res.redirect('/') ;
-            
             });
         });
     })

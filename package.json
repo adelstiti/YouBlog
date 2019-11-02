@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage" : "https://adelstiti.github.io/YouBlog",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "deploy" :""
   },
   "keywords": [],
   "author": "",
@@ -21,6 +23,7 @@
     "express-edge": "^2.0.0",
     "express-fileupload": "^1.1.6-alpha.5",
     "express-session": "^1.17.0",
+    "gh-pages": "^2.1.1",
     "mongoose": "^5.7.3"
   },
   "devDependencies": {
