@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage" : "https://adelstiti.github.io/YouBlog",
+  "homepage": "https://adelstiti.github.io/YouBlog",
   "scripts": {
     "start": "nodemon index.js",
-    "deploy" :""
+    "deploy": ""
   },
   "keywords": [],
   "author": "",
@@ -27,6 +27,6 @@
     "mongoose": ">=5.7.5"
   },
   "devDependencies": {
-    "nodemon": "^1.19.3"
+    "nodemon": "^2.0.20"
   }
 }

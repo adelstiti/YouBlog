@@ -63,7 +63,7 @@ app.set('views', `${__dirname}/views`);
 
 
 app.use('*',(req,res,next) =>{
-    edge.global('auth',req.session.userId)
+    app.locals.auth = req.session.userId
     next()
 });
 
